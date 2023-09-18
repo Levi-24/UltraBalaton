@@ -19,6 +19,17 @@ namespace UltraBalaton
             while (!sr.EndOfStream) versenyzok.Add(new Versenyzo(sr.ReadLine()));
 
             Console.WriteLine($"3.Feladat: Egyéni indulók: {versenyzok.Count} fő");
+
+            int teljesnoi = 0;
+            foreach (var v in versenyzok)
+            {
+                if (v.Kategoria == false && v.TeljesTav == 100)
+                {
+                    teljesnoi++;
+                }
+            }
+            Console.WriteLine($"4.Feladat: Célba érkező női sportolók: {teljesnoi} fő");
+
         }
     }
 }
