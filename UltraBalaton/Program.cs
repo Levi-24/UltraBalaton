@@ -30,6 +30,8 @@ namespace UltraBalaton
             }
             Console.WriteLine($"4.Feladat: Célba érkező női sportolók: {teljesnoi} fő");
 
+            Console.WriteLine("Kérem a sportoló nevét:");
+            string nev = Console.ReadLine();
         }
     }
 }
