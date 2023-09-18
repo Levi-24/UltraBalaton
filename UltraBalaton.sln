@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UltraBalaton", "UltraBalaton\UltraBalaton.csproj", "{67A8E56B-04BE-4B03-AE87-D906FF6A8C72}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67A8E56B-04BE-4B03-AE87-D906FF6A8C72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67A8E56B-04BE-4B03-AE87-D906FF6A8C72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67A8E56B-04BE-4B03-AE87-D906FF6A8C72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67A8E56B-04BE-4B03-AE87-D906FF6A8C72}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5DDEA92A-AAF9-44A0-AF87-987BC8DBD938}
+	EndGlobalSection
+EndGlobal
