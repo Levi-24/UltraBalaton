@@ -31,7 +31,7 @@ namespace UltraBalaton
             }
             Console.WriteLine($"4.Feladat: Célba érkező női sportolók: {teljesnoi} fő");
 
-            Console.WriteLine("Kérem a sportoló nevét:");
+            Console.Write("5.Feladat: Kérem a sportoló nevét: ");
             string nev = Console.ReadLine();
 
             string indult = "Nem";
@@ -45,8 +45,8 @@ namespace UltraBalaton
             }
 
 
-            Console.WriteLine($"Indult egyéniben a sportoló? {indult}");
-            Console.WriteLine($"Teljesítette a teljes távot? {teljesitett}");
+            Console.WriteLine($"\t Indult egyéniben a sportoló? {indult}");
+            Console.WriteLine($"\t Teljesítette a teljes távot? {teljesitett}");
         }
     }
 }
