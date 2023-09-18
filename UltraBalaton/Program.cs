@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Linq;
 
 namespace UltraBalaton
 {
@@ -32,6 +33,20 @@ namespace UltraBalaton
 
             Console.WriteLine("Kérem a sportoló nevét:");
             string nev = Console.ReadLine();
+
+            string indult = "Nem";
+            string teljesitett = "Nem";
+            bool tartalmaz = versenyzok.Any(v => v.Nev == nev);
+
+            if (tartalmaz)
+            {
+                indult = "Igen";
+                foreach (var v in versenyzok) if (v.Nev == nev && v.TeljesTav == 100) teljesitett = "Igen";
+            }
+
+
+            Console.WriteLine($"Indult egyéniben a sportoló? {indult}");
+            Console.WriteLine($"Teljesítette a teljes távot? {teljesitett}");
         }
     }
 }
