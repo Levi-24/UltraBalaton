@@ -38,15 +38,6 @@ namespace UltraBalaton
 
             Console.WriteLine($"\t Indult egyéniben a sportoló? {indult}");
             Console.WriteLine($"\t Teljesítette a teljes távot? {teljesitett}");
-
-            Console.WriteLine("6.Feladat:");
-
-        }
-
-        static double IdoOraban(int[] ido)
-        {
-            double vegeredmeny = (ido[0] * 3600 + ido[1] * 60 + ido[2]) / 3600;
-            return vegeredmeny;
         }
     }
 }
