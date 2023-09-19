@@ -24,7 +24,7 @@ namespace UltraBalaton
             int teljesnoi = 0;
             foreach (var v in versenyzok)
             {
-                if (v.Kategoria == false && v.TeljesTav == 100)
+                if (v.Kategoria == false && v.TavSzazalek == 100)
                 {
                     teljesnoi++;
                 }
@@ -41,7 +41,7 @@ namespace UltraBalaton
             if (tartalmaz)
             {
                 indult = "Igen";
-                foreach (var v in versenyzok) if (v.Nev == nev && v.TeljesTav == 100) teljesitett = "Igen";
+                foreach (var v in versenyzok) if (v.Nev == nev && v.TavSzazalek == 100) teljesitett = "Igen";
             }
 
             Console.WriteLine($"\t Indult egyéniben a sportoló? {indult}");

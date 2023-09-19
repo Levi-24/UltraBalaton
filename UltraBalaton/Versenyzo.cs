@@ -9,24 +9,23 @@ namespace UltraBalaton
     class Versenyzo
     {
         public string Nev { get; set; }
-        public int VersenySzam { get; set; }
+        public string RajtSzam { get; set; }
         public bool Kategoria { get; set; }
-        public int[] IdoPontszamok { get; set; }
-        public int TeljesTav { get; set; }
+        public TimeSpan VersenyIdo { get; set; }
+        public int TavSzazalek { get; set; }
 
         public Versenyzo(string beolvasottSor)
         {
-            string[] adat = beolvasottSor.Split(';');
+            var adat = beolvasottSor.Split(';');
             this.Nev = adat[0];
-            this.VersenySzam = int.Parse(adat[1]);
+            this.RajtSzam = adat[1];
             this.Kategoria = adat[2] == "Ferfi";
-            this.IdoPontszamok = new int[3];
-            string[] pontok = adat[3].Split(':');
-            for (int i = 0; i < IdoPontszamok.Length; i++)
-            {
-                IdoPontszamok[i] = int.Parse(pontok[i]);
-            }
-            this.TeljesTav = int.Parse(adat[4]);
+            var ido = adat[3].Split(':');
+            this.VersenyIdo = new TimeSpan(
+                hours: int.Parse(ido[0]),
+                minutes: int.Parse(ido[1]),
+                seconds: int.Parse(ido[2]));
+            this.TavSzazalek = int.Parse(adat[4]);
         }
     }
 }
