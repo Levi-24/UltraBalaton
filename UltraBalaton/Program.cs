@@ -12,14 +12,13 @@ namespace UltraBalaton
         {
             var versenyzok = new List<Versenyzo>();
             using var sr = new StreamReader(
-                path: "../../../src/ub2017egyeni.txt",
+                path: @"..\..\..\src\ub2017egyeni.txt",
                 Encoding.UTF8);
-
-            string headerLine = sr.ReadLine();
+            _ = sr.ReadLine();
 
             while (!sr.EndOfStream) versenyzok.Add(new Versenyzo(sr.ReadLine()));
 
-            Console.WriteLine($"3.Feladat: Egyéni indulók: {versenyzok.Count} fő");
+            Console.WriteLine($"3.Feladat: Egyéni indulók száma: {versenyzok.Count} fő");
 
             int teljesnoi = 0;
             foreach (var v in versenyzok)
