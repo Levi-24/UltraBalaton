@@ -20,15 +20,8 @@ namespace UltraBalaton
 
             Console.WriteLine($"3.Feladat: Egyéni indulók száma: {versenyzok.Count} fő");
 
-            int teljesnoi = 0;
-            foreach (var v in versenyzok)
-            {
-                if (v.Kategoria == false && v.TavSzazalek == 100)
-                {
-                    teljesnoi++;
-                }
-            }
-            Console.WriteLine($"4.Feladat: Célba érkező női sportolók: {teljesnoi} fő");
+            var f4 = versenyzok.Count(v => !v.Kategoria && v.TavSzazalek == 100);
+            Console.WriteLine($"4.Feladat: Célba érkező női sportolók: {f4} fő");
 
             Console.Write("5.Feladat: Kérem a sportoló nevét: ");
             string nev = Console.ReadLine();
